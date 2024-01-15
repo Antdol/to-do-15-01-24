@@ -1,7 +1,9 @@
 <?php
 $file = json_decode(file_get_contents("afficher.json"), true);
 
-if (isset($_POST["nom"]))
+
+
+if (isset($_POST["task"]))
 {
     $file[] = ["nom" => $_POST["task"], "complete" => false];
     file_put_contents("./afficher.json", json_encode($file));
